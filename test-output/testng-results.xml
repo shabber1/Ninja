@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="6" passed="2" failed="1" skipped="1">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-25T17:52:45 IST" name="Suite" finished-at="2024-11-25T17:52:48 IST" duration-ms="2328">
+    <groups>
+    </groups>
+    <test started-at="2024-11-25T17:52:45 IST" name="Test" finished-at="2024-11-25T17:52:48 IST" duration-ms="2328">
+      <class name="com.ninza.hrm.api.employetest.EmployeeTest">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:com.ninza.hrm.api.employetest.EmployeeTest@1de5f259]" started-at="2024-11-25T17:52:45 IST" name="configBS" finished-at="2024-11-25T17:52:45 IST" duration-ms="971" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBS -->
+        <test-method signature="addEmployeeTest()[pri:0, instance:com.ninza.hrm.api.employetest.EmployeeTest@1de5f259]" started-at="2024-11-25T17:52:46 IST" name="addEmployeeTest" finished-at="2024-11-25T17:52:47 IST" duration-ms="1605" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEmployeeTest -->
+        <test-method signature="addEmployeewithoutEmailTest()[pri:0, instance:com.ninza.hrm.api.employetest.EmployeeTest@1de5f259]" started-at="2024-11-25T17:52:47 IST" name="addEmployeewithoutEmailTest" finished-at="2024-11-25T17:52:47 IST" duration-ms="152" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEmployeewithoutEmailTest -->
+        <test-method is-config="true" signature="configAS()[pri:0, instance:com.ninza.hrm.api.employetest.EmployeeTest@1de5f259]" started-at="2024-11-25T17:52:48 IST" name="configAS" finished-at="2024-11-25T17:52:48 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAS -->
+      </class> <!-- com.ninza.hrm.api.employetest.EmployeeTest -->
+      <class name="com.ninza.hrm.api.projecttest.ProjectTest">
+        <test-method signature="addSingleProjectWithCreatedTest()[pri:0, instance:com.ninza.hrm.api.projecttest.ProjectTest@7bab3f1a]" started-at="2024-11-25T17:52:47 IST" name="addSingleProjectWithCreatedTest" finished-at="2024-11-25T17:52:48 IST" duration-ms="539" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "java.sql.Connection.createStatement()" because "this.con" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.con" is null
+at com.ninza.hrm.api.genericutility.DataBaseUtility.executeQueryVerifyAndGetData(DataBaseUtility.java:55)
+at com.ninza.hrm.api.projecttest.ProjectTest.addSingleProjectWithCreatedTest(ProjectTest.java:55)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addSingleProjectWithCreatedTest -->
+        <test-method signature="createDuplicateProjectTest()[pri:0, instance:com.ninza.hrm.api.projecttest.ProjectTest@7bab3f1a]" started-at="2024-11-25T17:52:48 IST" name="createDuplicateProjectTest" finished-at="2024-11-25T17:52:48 IST" depends-on-methods="com.ninza.hrm.api.projecttest.ProjectTest.addSingleProjectWithCreatedTest" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method ProjectTest.createDuplicateProjectTest()[pri:0, instance:com.ninza.hrm.api.projecttest.ProjectTest@7bab3f1a] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method ProjectTest.createDuplicateProjectTest()[pri:0, instance:com.ninza.hrm.api.projecttest.ProjectTest@7bab3f1a] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createDuplicateProjectTest -->
+      </class> <!-- com.ninza.hrm.api.projecttest.ProjectTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
